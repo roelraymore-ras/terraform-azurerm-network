@@ -12,7 +12,7 @@ The module does not create nor expose a security group. This would need to be de
 
 ```hcl
 module "network" {
-    source              = "Azure/network/azurerm"
+    source              = "cloudacademy/network/azurerm"
     resource_group_name = "myapp"
     location            = "westus"
     address_space       = "10.0.0.0/16"
@@ -33,7 +33,7 @@ module "network" {
 variable "resource_group_name" { }
 
 module "network" {
-  source              = "Azure/network/azurerm"
+  source              = "cloudacademy/network/azurerm"
   resource_group_name = "${var.resource_group_name}"
   location            = "westus"
   address_space       = "10.0.0.0/16"
